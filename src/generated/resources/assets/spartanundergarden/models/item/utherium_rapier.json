@@ -1,0 +1,22 @@
+{
+  "parent": "spartanweaponry:item/base/rapier",
+  "loader": "spartanweaponry:oil_coated_item",
+  "overrides": [
+    {
+      "model": "spartanundergarden:item/utherium_rapier_blocking",
+      "predicate": {
+        "spartanweaponry:blocking": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/utherium_rapier_throwing",
+      "predicate": {
+        "spartanweaponry:throwing": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "coating": "spartanweaponry:item/coating/rapier",
+    "layer0": "spartanundergarden:item/utherium_rapier"
+  }
+}

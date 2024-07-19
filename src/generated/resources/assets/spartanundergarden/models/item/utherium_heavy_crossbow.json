@@ -1,0 +1,41 @@
+{
+  "parent": "spartanweaponry:item/base/heavy_crossbow",
+  "overrides": [
+    {
+      "model": "spartanundergarden:item/utherium_heavy_crossbow_pulling_0",
+      "predicate": {
+        "spartanweaponry:pulling": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/utherium_heavy_crossbow_pulling_1",
+      "predicate": {
+        "spartanweaponry:pull": 0.65,
+        "spartanweaponry:pulling": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/utherium_heavy_crossbow_pulling_2",
+      "predicate": {
+        "spartanweaponry:pull": 1.0,
+        "spartanweaponry:pulling": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/utherium_heavy_crossbow_loaded",
+      "predicate": {
+        "spartanweaponry:charged": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/utherium_heavy_crossbow_firing",
+      "predicate": {
+        "spartanweaponry:charged": 1.0,
+        "spartanweaponry:pulling": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "spartanundergarden:item/utherium_heavy_crossbow_standby"
+  }
+}

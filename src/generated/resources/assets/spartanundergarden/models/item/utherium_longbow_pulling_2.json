@@ -1,0 +1,6 @@
+{
+  "parent": "spartanweaponry:item/base/longbow_pulling",
+  "textures": {
+    "layer0": "spartanundergarden:item/utherium_longbow_pulling_2"
+  }
+}

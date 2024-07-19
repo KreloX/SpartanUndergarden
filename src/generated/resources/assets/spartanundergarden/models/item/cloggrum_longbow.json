@@ -1,0 +1,28 @@
+{
+  "parent": "spartanweaponry:item/base/longbow",
+  "overrides": [
+    {
+      "model": "spartanundergarden:item/cloggrum_longbow_pulling_0",
+      "predicate": {
+        "spartanweaponry:pulling": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/cloggrum_longbow_pulling_1",
+      "predicate": {
+        "spartanweaponry:pull": 0.65,
+        "spartanweaponry:pulling": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/cloggrum_longbow_pulling_2",
+      "predicate": {
+        "spartanweaponry:pull": 0.9,
+        "spartanweaponry:pulling": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "spartanundergarden:item/cloggrum_longbow_standby"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "spartanweaponry:type_disabled",
+      "disabled": [
+        "quarterstaff"
+      ]
+    }
+  ],
+  "group": "spartanweaponry:quarterstaff",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/cloggrum"
+    },
+    "/": {
+      "item": "spartanweaponry:pole"
+    }
+  },
+  "pattern": [
+    "  #",
+    " / ",
+    "#  "
+  ],
+  "result": {
+    "item": "spartanundergarden:cloggrum_quarterstaff"
+  }
+}

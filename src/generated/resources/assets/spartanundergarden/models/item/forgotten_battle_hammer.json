@@ -1,0 +1,22 @@
+{
+  "parent": "spartanweaponry:item/base/battle_hammer",
+  "loader": "spartanweaponry:oil_coated_item",
+  "overrides": [
+    {
+      "model": "spartanundergarden:item/forgotten_battle_hammer_blocking",
+      "predicate": {
+        "spartanweaponry:blocking": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/forgotten_battle_hammer_throwing",
+      "predicate": {
+        "spartanweaponry:throwing": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "coating": "spartanweaponry:item/coating/battle_hammer",
+    "layer0": "spartanundergarden:item/forgotten_battle_hammer"
+  }
+}

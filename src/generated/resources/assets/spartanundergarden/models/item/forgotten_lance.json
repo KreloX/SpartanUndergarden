@@ -1,0 +1,22 @@
+{
+  "parent": "spartanweaponry:item/base/lance",
+  "loader": "spartanweaponry:oil_coated_item",
+  "overrides": [
+    {
+      "model": "spartanundergarden:item/forgotten_lance_blocking",
+      "predicate": {
+        "spartanweaponry:blocking": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/forgotten_lance_throwing",
+      "predicate": {
+        "spartanweaponry:throwing": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "coating": "spartanweaponry:item/coating/lance",
+    "layer0": "spartanundergarden:item/forgotten_lance"
+  }
+}

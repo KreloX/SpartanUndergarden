@@ -1,0 +1,21 @@
+{
+  "parent": "spartanweaponry:item/base/tomahawk",
+  "overrides": [
+    {
+      "model": "spartanundergarden:item/forgotten_tomahawk_throwing",
+      "predicate": {
+        "spartanweaponry:empty": 0.0,
+        "spartanweaponry:throwing": 1.0
+      }
+    },
+    {
+      "model": "spartanweaponry:item/base/tomahawk_empty",
+      "predicate": {
+        "spartanweaponry:empty": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "spartanundergarden:item/forgotten_tomahawk"
+  }
+}

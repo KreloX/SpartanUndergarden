@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cloggrum": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:ingots/cloggrum"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spartanundergarden:cloggrum_halberd"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cloggrum",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spartanundergarden:cloggrum_halberd"
+    ]
+  },
+  "sends_telemetry_event": true
+}

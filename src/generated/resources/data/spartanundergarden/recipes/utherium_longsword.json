@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "spartanweaponry:type_disabled",
+      "disabled": [
+        "longsword"
+      ]
+    }
+  ],
+  "group": "spartanweaponry:longsword",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/utherium"
+    },
+    "|": {
+      "item": "spartanweaponry:handle"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    "#|#"
+  ],
+  "result": {
+    "item": "spartanundergarden:utherium_longsword"
+  }
+}

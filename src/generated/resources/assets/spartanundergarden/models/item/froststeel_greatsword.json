@@ -1,0 +1,22 @@
+{
+  "parent": "spartanweaponry:item/base/greatsword",
+  "loader": "spartanweaponry:oil_coated_item",
+  "overrides": [
+    {
+      "model": "spartanundergarden:item/froststeel_greatsword_blocking",
+      "predicate": {
+        "spartanweaponry:blocking": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/froststeel_greatsword_throwing",
+      "predicate": {
+        "spartanweaponry:throwing": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "coating": "spartanweaponry:item/coating/greatsword",
+    "layer0": "spartanundergarden:item/froststeel_greatsword"
+  }
+}

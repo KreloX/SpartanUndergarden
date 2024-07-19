@@ -1,0 +1,8 @@
+{
+  "parent": "spartanweaponry:item/base/parrying_dagger_throwing",
+  "loader": "spartanweaponry:oil_coated_item",
+  "textures": {
+    "coating": "spartanweaponry:item/coating/parrying_dagger",
+    "layer0": "spartanundergarden:item/utherium_parrying_dagger"
+  }
+}

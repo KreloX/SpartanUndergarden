@@ -1,0 +1,8 @@
+{
+  "parent": "spartanweaponry:item/base/scythe_blocking",
+  "loader": "spartanweaponry:oil_coated_item",
+  "textures": {
+    "coating": "spartanweaponry:item/coating/scythe",
+    "layer0": "spartanundergarden:item/utherium_scythe"
+  }
+}

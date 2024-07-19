@@ -1,0 +1,43 @@
+modLoader="javafml"
+loaderVersion="loaderVersionRange"
+issueTrackerURL="$modIssueTracker"
+license="$modLicense"
+[[mods]]
+modId="$modId"
+version="$modVersion"
+displayName="$modName"
+displayURL="$modHomepage"
+logoFile="logo.png"
+credits="$modCredits"
+authors="$modAuthors"
+description='''$modDescription'''
+[[dependencies.$modId]]
+    modId="forge"
+    mandatory=true
+    versionRange="$forgeVersionRange"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.$modId]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="$minecraftVersionRange"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.$modId]]
+    modId="spartanweaponry"
+    mandatory=true
+    versionRange="[$spartanWeaponryVersion,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.$modId]]
+    modId="spartantoolkit"
+    mandatory=true
+    versionRange="[$spartanToolkitVersion,$spartanToolkitLimit)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.$modId]]
+    modId="undergarden"
+    mandatory=true
+    versionRange="[$undergardenVersion,)"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "spartanweaponry:type_disabled",
+      "disabled": [
+        "warhammer"
+      ]
+    }
+  ],
+  "group": "spartanweaponry:warhammer",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/cloggrum"
+    },
+    "|": {
+      "item": "spartanweaponry:handle"
+    }
+  },
+  "pattern": [
+    " #",
+    "##",
+    " |"
+  ],
+  "result": {
+    "item": "spartanundergarden:cloggrum_warhammer"
+  }
+}

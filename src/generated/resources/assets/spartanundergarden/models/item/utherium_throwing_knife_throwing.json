@@ -1,0 +1,6 @@
+{
+  "parent": "spartanweaponry:item/base/throwing_knife_throwing",
+  "textures": {
+    "layer0": "spartanundergarden:item/utherium_throwing_knife"
+  }
+}

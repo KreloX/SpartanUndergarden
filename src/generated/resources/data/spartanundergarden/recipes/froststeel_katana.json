@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "spartanweaponry:type_disabled",
+      "disabled": [
+        "katana"
+      ]
+    }
+  ],
+  "group": "spartanweaponry:katana",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/froststeel"
+    },
+    "|": {
+      "item": "spartanweaponry:handle"
+    }
+  },
+  "pattern": [
+    "  #",
+    " # ",
+    "|  "
+  ],
+  "result": {
+    "item": "spartanundergarden:froststeel_katana"
+  }
+}

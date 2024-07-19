@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "spartanweaponry:type_disabled",
+      "disabled": [
+        "scythe"
+      ]
+    }
+  ],
+  "group": "spartanweaponry:scythe",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/cloggrum"
+    },
+    "/": {
+      "item": "spartanweaponry:pole"
+    }
+  },
+  "pattern": [
+    "## ",
+    "  #",
+    " / "
+  ],
+  "result": {
+    "item": "spartanundergarden:cloggrum_scythe"
+  }
+}

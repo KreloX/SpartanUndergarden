@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "spartanweaponry:type_disabled",
+      "disabled": [
+        "rapier"
+      ]
+    }
+  ],
+  "group": "spartanweaponry:rapier",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/utherium"
+    },
+    "|": {
+      "item": "spartanweaponry:handle"
+    }
+  },
+  "pattern": [
+    "  #",
+    "## ",
+    "|# "
+  ],
+  "result": {
+    "item": "spartanundergarden:utherium_rapier"
+  }
+}

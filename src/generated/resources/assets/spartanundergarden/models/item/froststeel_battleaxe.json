@@ -1,0 +1,22 @@
+{
+  "parent": "spartanweaponry:item/base/battleaxe",
+  "loader": "spartanweaponry:oil_coated_item",
+  "overrides": [
+    {
+      "model": "spartanundergarden:item/froststeel_battleaxe_blocking",
+      "predicate": {
+        "spartanweaponry:blocking": 1.0
+      }
+    },
+    {
+      "model": "spartanundergarden:item/froststeel_battleaxe_throwing",
+      "predicate": {
+        "spartanweaponry:throwing": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "coating": "spartanweaponry:item/coating/battleaxe",
+    "layer0": "spartanundergarden:item/froststeel_battleaxe"
+  }
+}
