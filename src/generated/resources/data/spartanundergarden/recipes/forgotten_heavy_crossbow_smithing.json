@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "forge:ingots/forgotten_metal"
+  },
+  "base": {
+    "item": "spartanundergarden:cloggrum_heavy_crossbow"
+  },
+  "result": {
+    "item": "spartanundergarden:forgotten_heavy_crossbow"
+  },
+  "template": {
+    "item": "undergarden:forgotten_upgrade_smithing_template"
+  }
+}

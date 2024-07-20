@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "forge:ingots/forgotten_metal"
+  },
+  "base": {
+    "item": "spartanundergarden:cloggrum_battleaxe"
+  },
+  "result": {
+    "item": "spartanundergarden:forgotten_battleaxe"
+  },
+  "template": {
+    "item": "undergarden:forgotten_upgrade_smithing_template"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_forgotten_upgrade_smithing_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "undergarden:forgotten_upgrade_smithing_template"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "spartanundergarden:forgotten_longsword_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_forgotten_upgrade_smithing_template",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "spartanundergarden:forgotten_longsword_smithing"
+    ]
+  },
+  "sends_telemetry_event": false
+}

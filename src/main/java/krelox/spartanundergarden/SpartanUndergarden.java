@@ -8,9 +8,13 @@ import krelox.spartantoolkit.WeaponType;
 import krelox.spartanundergarden.trait.ChillTrait;
 import krelox.spartanundergarden.trait.RotspawnDamageBonusTrait;
 import krelox.spartanundergarden.trait.UndergardenDamageBonusTrait;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,6 +24,7 @@ import quek.undergarden.registry.UGItems;
 import quek.undergarden.registry.UGTags;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 @Mod(SpartanUndergarden.MODID)
 public class SpartanUndergarden extends SpartanAddon {
@@ -58,6 +63,21 @@ public class SpartanUndergarden extends SpartanAddon {
         ITEMS.register(bus);
         TRAITS.register(bus);
         TABS.register(bus);
+    }
+
+    @Override
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
+        WEAPONS.forEach((key, item) -> {
+            SpartanMaterial material = key.first();
+            WeaponType type = key.second();
+            if (material.equals(FORGOTTEN)) {
+                SmithingTransformRecipeBuilder
+                        .smithing(Ingredient.of(UGItems.FORGOTTEN_UPGRADE_TEMPLATE.get()), Ingredient.of(WEAPONS.get(CLOGGRUM, type).get()),
+                                Ingredient.of(UGTags.Items.INGOTS_FORGOTTEN_METAL), RecipeCategory.COMBAT, item.get())
+                        .unlocks("has_" + UGItems.FORGOTTEN_UPGRADE_TEMPLATE.getId().getPath(), has(UGItems.FORGOTTEN_UPGRADE_TEMPLATE.get()))
+                        .save(consumer, item.getId().withSuffix("_smithing"));
+            } else type.recipe.accept(WEAPONS, consumer, material);
+        });
     }
 
     @Override

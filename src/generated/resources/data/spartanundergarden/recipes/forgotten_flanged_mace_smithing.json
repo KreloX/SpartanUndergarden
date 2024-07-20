@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "forge:ingots/forgotten_metal"
+  },
+  "base": {
+    "item": "spartanundergarden:cloggrum_flanged_mace"
+  },
+  "result": {
+    "item": "spartanundergarden:forgotten_flanged_mace"
+  },
+  "template": {
+    "item": "undergarden:forgotten_upgrade_smithing_template"
+  }
+}
