@@ -11,6 +11,8 @@ import krelox.spartanundergarden.trait.UndergardenDamageBonusTrait;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
+import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
+import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -23,8 +25,10 @@ import quek.undergarden.registry.UGItemTiers;
 import quek.undergarden.registry.UGItems;
 import quek.undergarden.registry.UGTags;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 @Mod(SpartanUndergarden.MODID)
 public class SpartanUndergarden extends SpartanAddon {
@@ -41,6 +45,8 @@ public class SpartanUndergarden extends SpartanAddon {
     public static final RegistryObject<WeaponTrait> UNDERGARDEN_DAMAGE_BONUS = registerTrait(TRAITS, new UndergardenDamageBonusTrait().setMagnitude(1.5F));
 
     // Materials
+    public static final ArrayList<SpartanMaterial> MATERIALS = new ArrayList<>();
+
     public static final SpartanMaterial CLOGGRUM = material(UGItemTiers.CLOGGRUM, UGTags.Items.INGOTS_CLOGGRUM);
     public static final SpartanMaterial FROSTSTEEL = material(UGItemTiers.FROSTSTEEL, UGTags.Items.INGOTS_FROSTSTEEL, CHILLY);
     public static final SpartanMaterial UTHERIUM = material(UGItemTiers.UTHERIUM, UGTags.Items.INGOTS_UTHERIUM, ROTSPAWN_DAMAGE_BONUS);
@@ -48,7 +54,9 @@ public class SpartanUndergarden extends SpartanAddon {
 
     @SafeVarargs
     private static SpartanMaterial material(UGItemTiers tier, TagKey<Item> repairTag, RegistryObject<WeaponTrait>... traits) {
-        return new SpartanMaterial(tier.name().toLowerCase(), MODID, tier, repairTag, traits);
+        SpartanMaterial material = new SpartanMaterial(tier.name().toLowerCase(), MODID, tier, repairTag, traits);
+        MATERIALS.add(material);
+        return material;
     }
 
     @SuppressWarnings("unused")
@@ -63,6 +71,17 @@ public class SpartanUndergarden extends SpartanAddon {
         ITEMS.register(bus);
         TRAITS.register(bus);
         TABS.register(bus);
+    }
+
+    @Override
+    protected void addItemTags(ItemTagsProvider provider, Function<TagKey<Item>, IntrinsicHolderTagsProvider.IntrinsicTagAppender<Item>> tag) {
+        Function<SpartanMaterial, Item[]> func = material -> WEAPONS.entrySet().stream()
+                .filter(entry -> entry.getKey().first().equals(material))
+                .map(entry -> entry.getValue().get())
+                .toArray(Item[]::new);
+        tag.apply(UGTags.Items.CLOGGRUM_ITEMS).add(func.apply(CLOGGRUM));
+        tag.apply(UGTags.Items.FROSTSTEEL_ITEMS).add(func.apply(FROSTSTEEL));
+        tag.apply(UGTags.Items.UTHERIUM_ITEMS).add(func.apply(UTHERIUM));
     }
 
     @Override
@@ -87,7 +106,7 @@ public class SpartanUndergarden extends SpartanAddon {
 
     @Override
     public List<SpartanMaterial> getMaterials() {
-        return List.of(CLOGGRUM, FROSTSTEEL, UTHERIUM, FORGOTTEN);
+        return MATERIALS;
     }
 
     @Override

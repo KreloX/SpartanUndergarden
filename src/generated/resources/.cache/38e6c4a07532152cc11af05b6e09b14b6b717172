@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-19T11:26:44.9821286	Tags for minecraft:item mod id spartanundergarden
+// 1.20.1	2024-08-14T21:14:45.4227142	Tags for minecraft:item mod id spartanundergarden
 43bea3ac9ca89f7ff204f2254f9b6e9e6b6a5e1c data/spartanweaponry/tags/items/battleaxes.json
 74e329cf99442d457b020d3d6750a4eb9a399ec4 data/spartanweaponry/tags/items/battle_hammers.json
 90d5d0ada0fb1048dd944fa72e67c49093fac2b1 data/spartanweaponry/tags/items/boomerangs.json
@@ -23,3 +23,6 @@ a438d28604289c66b950c313176dd0b74d9413f4 data/spartanweaponry/tags/items/quarter
 0503218c7feb67610df690f44919609e9d9e5a9e data/spartanweaponry/tags/items/throwing_knives.json
 7fa293c663b1fd98ec450b56f578d49cfd0f1a3e data/spartanweaponry/tags/items/tomahawks.json
 291e019757e2868080bbbd3ec090947109ef3a37 data/spartanweaponry/tags/items/warhammers.json
+3d652685f9477be76db69f00d92283df07a4d09a data/undergarden/tags/items/cloggrum_items.json
+f31111eab53c23d1b2cb07e6eaf31b1389761e77 data/undergarden/tags/items/froststeel_items.json
+b225e7dd6d30b849b283350f68eea8dff63926a3 data/undergarden/tags/items/utherium_items.json
