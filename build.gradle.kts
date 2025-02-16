@@ -31,7 +31,7 @@ val spartanToolkitLimit: String by project
 val undergardenVersion: String by project
 val emiVersion: String by project
 
-version = "$minecraftVersion-$modVersion"
+version = modVersion
 group = modGroupId
 base.archivesName = modId
 
